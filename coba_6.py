@@ -4,6 +4,7 @@ from PIL import Image
 import numpy as np
 import io
 import tensorflow as tf
+import cv2
 
 st.set_page_config(page_title="🎀 Image App", layout="centered")
 
@@ -97,3 +98,4 @@ if uploaded_file:
             result = classifier_model.predict(img_array)
             class_idx = int(np.argmax(result))
             st.success(f"✅ Predicted Class: {class_idx}")
+
